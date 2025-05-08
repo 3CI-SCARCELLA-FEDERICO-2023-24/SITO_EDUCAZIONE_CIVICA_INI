@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Testimonianze</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="../index.html">War Weapons</a></div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="weapons.html">Armi</a></li>
+        <li><a href="conflicts.html">Conflitti</a></li>
+      </ul>
+      <div class="search-container">
+        <input type="text" placeholder="Cerca..." id="searchInput">
+        <button id="searchButton">Cerca</button>
+      </div>
+      <div class="auth-buttons">
+        <button id="loginBtn" onclick="showLogin()">Login</button>
+        <button id="registerBtn" onclick="showRegister()">Registrati</button>
+        <button id="logoutBtn" style="display:none;" onclick="logout()">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container"id="mainP">
+    <h1>Testimonianze</h1>
+    <section>
+      <p>
+        Racconti e testimonianze di chi ha vissuto direttamente la violenza armata e i suoi effetti sulla vita quotidiana.
+      </p>
+    </section>
+    
+    <!-- Approfondimenti -->
+    <section class="approfondimenti">
+      <h2>Approfondimenti: Voci dal Campo</h2>
+      <p>
+        Le testimonianze raccolte offrono un ritratto umano della sofferenza e della resilienza in tempi di conflitto. Le storie di chi ha vissuto esperienze dirette, dai rifugiati ai militari, raccontano di disperazione, speranza e la continua ricerca di pace. Questi racconti personali non solo documentano la realtà dei fatti, ma fungono anche da monito per le generazioni future.
+      </p>
+    </section>
+    <section class="approfondimenti">
+      <h2>Approfondimenti: Il Potere della Narrazione Terapeutica</h2>
+      <p>
+        La condivisione di esperienze traumatiche può diventare un percorso di guarigione sia per chi racconta sia per chi ascolta. Le comunità che promuovono il dialogo e la narrazione aperta favoriscono un processo di riconciliazione e costruzione di un futuro migliore. Le testimonianze evidenziano il coraggio di chi ha saputo trasformare il dolore in consapevolezza e l’azione di chi lotta per evitare il ripetersi della violenza.
+      </p>
+    </section>
+  </main>
+
+  <!-- MODALI -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('loginModal')">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Accedi</button>
+      </form>
+    </div>
+  </div>
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('registerModal')">&times;</span>
+      <h2>Registrati</h2>
+      <form id="registerForm">
+        <input type="text" id="registerFirstName" placeholder="Nome" required>
+        <input type="text" id="registerLastName" placeholder="Cognome" required>
+        <input type="email" id="registerEmail" placeholder="Email" required>
+        <input type="tel" id="registerPhone" placeholder="Telefono" required>
+        <input type="text" id="registerUsername" placeholder="Username" required>
+        <input type="password" id="registerPassword" placeholder="Password" required>
+        <button type="submit">Registrati</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 - Creato da Federico Scarcella, Giusti Alessandro e Montresor Niccolò</p>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

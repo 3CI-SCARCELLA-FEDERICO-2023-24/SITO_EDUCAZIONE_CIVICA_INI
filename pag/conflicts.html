@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>I Conflitti e le loro Ferite</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="../index.html">War Weapons</a></div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="weapons.html">Armi</a></li>
+        <li><a href="conflicts.html">Conflitti</a></li>
+      </ul>
+      <div class="search-container">
+        <input type="text" placeholder="Cerca..." id="searchInput">
+        <button id="searchButton">Cerca</button>
+      </div>
+      <div class="auth-buttons">
+        <button id="loginBtn" onclick="showLogin()">Login</button>
+        <button id="registerBtn" onclick="showRegister()">Registrati</button>
+        <button id="logoutBtn" style="display:none;" onclick="logout()">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container" id="mainP">
+    <h1>I Conflitti e le loro Ferite</h1>
+    <section class="intro">
+      <p>
+        I conflitti lasciano cicatrici profonde su ogni società. Questa pagina analizza le loro cause, dinamiche e conseguenze.
+      </p>
+    </section>
+    <section class="dettaglio">
+      <h2>Cause e Scatenanti</h2>
+      <p>
+        Dispute territoriali, ideologiche e lotte per il potere sono tra le cause che alimentano i conflitti.
+      </p>
+    </section>
+    <section class="dettaglio">
+      <h2>Conseguenze e Impatto Umanitario</h2>
+      <p>
+        I conflitti non si limitano a distruzioni materiali, ma provocano crisi umanitarie e traumi profondi.
+      </p>
+    </section>
+    <section class="dettaglio">
+      <h2>Nuove Modalità di Conflitto</h2>
+      <p>
+        Oggi emergono forme ibride e cyber-attacchi che ridefiniscono la guerra.
+      </p>
+    </section>
+    <img src="../img/post_apocalittica.png" alt="Scenario Post-Apocalittico" class="page-image">
+  </main>
+
+  <!-- MODALI -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('loginModal')">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Accedi</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('registerModal')">&times;</span>
+      <h2>Registrati</h2>
+      <form id="registerForm">
+        <input type="text" id="registerFirstName" placeholder="Nome" required>
+        <input type="text" id="registerLastName" placeholder="Cognome" required>
+        <input type="email" id="registerEmail" placeholder="Email" required>
+        <input type="tel" id="registerPhone" placeholder="Telefono" required>
+        <input type="text" id="registerUsername" placeholder="Username" required>
+        <input type="password" id="registerPassword" placeholder="Password" required>
+        <button type="submit">Registrati</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 - Creato da Federico Scarcella, Giusti Alessandro e Montresor Niccolò</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

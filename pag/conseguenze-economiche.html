@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Conseguenze Economiche</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="../index.html">War Weapons</a></div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="weapons.html">Armi</a></li>
+        <li><a href="conflicts.html">Conflitti</a></li>
+      </ul>
+      <div class="search-container">
+        <input type="text" placeholder="Cerca..." id="searchInput">
+        <button id="searchButton">Cerca</button>
+      </div>
+      <div class="auth-buttons">
+        <button id="loginBtn" onclick="showLogin()">Login</button>
+        <button id="registerBtn" onclick="showRegister()">Registrati</button>
+        <button id="logoutBtn" style="display:none;" onclick="logout()">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container"id="mainP">
+    <h1>Conseguenze Economiche</h1>
+    <section>
+      <p>
+        Esploriamo come i conflitti armati influenzino l'economia, danneggiando infrastrutture, sanità ed educazione.
+      </p>
+    </section>
+    
+    <!-- Approfondimenti -->
+    <section class="approfondimenti">
+      <h2>Approfondimenti: Il Costo della Guerra per l’Economia di uno Stato</h2>
+      <p>
+        I conflitti armati determinano un impatto devastante sulle risorse economiche di un paese. La distruzione di infrastrutture vitali – come ospedali, scuole, strade e sistemi energetici – comporta costi miliardari per la ricostruzione. Questi investimenti, assorbiti per anni, rallentano lo sviluppo economico e aumentano il debito pubblico, incidendo negativamente sul benessere generale della popolazione.
+      </p>
+    </section>
+    <section class="approfondimenti">
+      <h2>Approfondimenti: Effetti Collaterali sul Mercato Globale</h2>
+      <p>
+        Oltre agli impatti interni, i conflitti influenzano il mercato globale: le incertezze geopolitiche spingono a fluttuazioni dei prezzi delle materie prime, interrompono le catene di distribuzione internazionali e causano crisi economiche che travolgono interi settori. La mobilitazione delle risorse militari a discapito degli investimenti civili crea un circolo vizioso che rafforza le disparità economiche sia a livello nazionale che internazionale.
+      </p>
+    </section>
+  </main>
+
+  <!-- MODALI -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('loginModal')">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Accedi</button>
+      </form>
+    </div>
+  </div>
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('registerModal')">&times;</span>
+      <h2>Registrati</h2>
+      <form id="registerForm">
+        <input type="text" id="registerFirstName" placeholder="Nome" required>
+        <input type="text" id="registerLastName" placeholder="Cognome" required>
+        <input type="email" id="registerEmail" placeholder="Email" required>
+        <input type="tel" id="registerPhone" placeholder="Telefono" required>
+        <input type="text" id="registerUsername" placeholder="Username" required>
+        <input type="password" id="registerPassword" placeholder="Password" required>
+        <button type="submit">Registrati</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 - Creato da Federico Scarcella, Giusti Alessandro e Montresor Niccolò</p>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

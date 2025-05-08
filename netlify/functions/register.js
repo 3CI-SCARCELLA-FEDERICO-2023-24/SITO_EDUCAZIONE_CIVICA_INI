@@ -23,10 +23,10 @@ exports.handler = async (event) => {
     }
 
     // Controlla se l'utente esiste già nel database
-    const { data: existingUsers, error: selectError } = await supabase
-      .from('users')
-      .select('id')
-      .eq('username', username);
+  const { data: existingUsers, error: selectError } = await supabase
+    .from('users')
+    .select('*')
+    .eq('username', username);
 
     if (selectError) throw selectError;
     if (existingUsers.length > 0) {

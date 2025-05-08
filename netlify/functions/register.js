@@ -1,19 +1,17 @@
 exports.handler = async (event) => {
+  const users = JSON.parse(process.env.USERS_DATA || '{"users":[]}'); 
   const { username, password, firstName, lastName, email, phone } = JSON.parse(event.body);
-  
+
   if (!username || !password || !firstName || !lastName || !email || !phone) {
     return { statusCode: 400, body: JSON.stringify({ success: false, message: "Tutti i campi sono obbligatori!" }) };
   }
 
-  // Simulazione database (puoi sostituirlo con un database cloud)
-  let users = JSON.parse(process.env.USERS || "[]");
-  
-  if (users.find((u) => u.username === username)) {
+  if (users.users.find((u) => u.username === username)) {
     return { statusCode: 409, body: JSON.stringify({ success: false, message: "Utente già registrato!" }) };
   }
 
-  users.push({ username, password, firstName, lastName, email, phone });
-  process.env.USERS = JSON.stringify(users);
+  users.users.push({ username, password, firstName, lastName, email, phone });
+  process.env.USERS_DATA = JSON.stringify(users);
 
   return { statusCode: 200, body: JSON.stringify({ success: true, message: "Registrazione completata!" }) };
 };

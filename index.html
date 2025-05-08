@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>War Weapons - La Verità sulle Armi e la Violenza</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">War Weapons</a></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pag/weapons.html">Armi</a></li>
+        <li><a href="pag/conflicts.html">Conflitti</a></li>
+      </ul>
+      <div class="search-container">
+        <input type="text" placeholder="Cerca..." id="searchInput">
+        <button id="searchButton">Cerca</button>
+      </div>
+      <div class="auth-buttons">
+        <button id="loginBtn" onclick="showLogin()">Login</button>
+        <button id="registerBtn" onclick="showRegister()">Registrati</button>
+        <button id="logoutBtn" style="display:none;" onclick="logout()">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <h1>War Weapons</h1>
+      <p>Scopri la verità sulle armi e i conflitti che hanno plasmato la storia.</p>
+    </section>
+
+    <!-- SEZIONE SCHEDE INFORMATIVE -->
+    <section class="cards-container">
+      <!-- Card: Impatto Sociale -->
+      <div class="card" data-title="Impatto Sociale">
+        <img src="img/impatto_sociale.png" alt="Impatto Sociale">
+        <h3>Impatto Sociale</h3>
+        <p>Le armi intensificano le tensioni sociali e mettono a rischio la sicurezza delle comunità.</p>
+        <div class="card-footer">
+          <a href="pag/impatto-sociale.html">Approfondisci</a>
+        </div>
+      </div>
+      <!-- Card: Conseguenze Economiche -->
+      <div class="card" data-title="Conseguenze Economiche">
+        <img src="img/conseguenze_economiche.png" alt="Conseguenze Economiche">
+        <h3>Conseguenze Economiche</h3>
+        <p>I conflitti armati causano danni ai sistemi sanitari, educativi e infrastrutturali.</p>
+        <div class="card-footer">
+          <a href="pag/conseguenze-economiche.html">Approfondisci</a>
+        </div>
+      </div>
+      <!-- Card: Impatto Psicologico -->
+      <div class="card" data-title="Impatto Psicologico">
+        <img src="img/impatto_psicologico.png" alt="Impatto Psicologico">
+        <h3>Impatto Psicologico</h3>
+        <p>La violenza armata lascia cicatrici psicologiche profonde e durature.</p>
+        <div class="card-footer">
+          <a href="pag/impatto-psicologico.html">Approfondisci</a>
+        </div>
+      </div>
+      <!-- Card: Testimonianze -->
+      <div class="card" data-title="Testimonianze">
+        <img src="img/testimonianza.png" alt="Testimonianze">
+        <h3>Testimonianze</h3>
+        <p>Storie e racconti di chi ha vissuto direttamente le conseguenze della violenza armata.</p>
+        <div class="card-footer">
+          <a href="pag/testimonianze.html">Approfondisci</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE ARTICOLI RECENTI -->
+    <section class="articles">
+      <h2>Articoli Recenti</h2>
+      <article class="article">
+        <img src="img/armi_da_guerra.png" alt="L'evoluzione della violenza armata">
+        <div class="article-content">
+          <h3>L'evoluzione della violenza armata</h3>
+          <p>Un'analisi su come l'uso delle armi sia cambiato nel tempo e il suo impatto sulla società.</p>
+          <a href="pag/approfondimento1.html">Leggi di più &raquo;</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- MODALI -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('loginModal')">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Accedi</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('registerModal')">&times;</span>
+      <h2>Registrati</h2>
+      <form id="registerForm">
+        <input type="text" id="registerFirstName" placeholder="Nome" required>
+        <input type="text" id="registerLastName" placeholder="Cognome" required>
+        <input type="email" id="registerEmail" placeholder="Email" required>
+        <input type="tel" id="registerPhone" placeholder="Telefono" required>
+        <input type="text" id="registerUsername" placeholder="Username" required>
+        <input type="password" id="registerPassword" placeholder="Password" required>
+        <button type="submit">Registrati</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 - Creato da Federico Scarcella, Giusti Alessandro e Montresor Niccolò</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

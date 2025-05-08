@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((response) => response.json())
         .then((data) => {
           if (data.success) {
-            alert("Login effettuato con successo!");
+            alert("Login effettuato!");
             closeModal("loginModal");
             document.getElementById("logoutBtn").style.display = "inline-block";
             document.getElementById("loginBtn").style.display = "none";

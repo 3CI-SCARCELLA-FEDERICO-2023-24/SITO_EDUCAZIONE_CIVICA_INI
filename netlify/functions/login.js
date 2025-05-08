@@ -1,9 +1,9 @@
 exports.handler = async (event) => {
+  const users = JSON.parse(process.env.USERS_DATA || '{"users":[]}'); 
   const { username, password } = JSON.parse(event.body);
-  
-  let users = JSON.parse(process.env.USERS || "[]");
-  const user = users.find((u) => u.username === username && u.password === password);
-  
+
+  const user = users.users.find((u) => u.username === username && u.password === password);
+
   if (!user) {
     return { statusCode: 401, body: JSON.stringify({ success: false, message: "Credenziali errate!" }) };
   }
